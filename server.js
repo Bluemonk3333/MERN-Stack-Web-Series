@@ -10,8 +10,8 @@ app.get("/", (req, resp) => {
 // create a listener for our express server
 app.listen(port, (e) => {
   if (e) {
-    console.log(`Server is listening on: 127.0.0.1:{port}`);
+    console.log(`Server got an error! ${e}`);
   } else {
-    console.log(`Server got an error! {e}`);
+    console.log(`Server is listening on: 127.0.0.1:${port}`);
   }
 });
