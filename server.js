@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
+const router = require("./routers/router");
+
 const port = 9000;
 
-// create our home page
-app.get("/", (req, resp) => {
-  resp.status(200).send("Home Page!");
-});
+app.use(express.json());
+app.use(router);
 
 // create a listener for our express server
 app.listen(port, (e) => {
